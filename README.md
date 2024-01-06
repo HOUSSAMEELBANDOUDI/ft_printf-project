@@ -1,62 +1,103 @@
-# ft_printf - 42cursus
+<h1 align="center">
+	42cursus' ft_printf
+</h1>
 
-## Development Repository for 42cursus' ft_printf Project
+<p align="center">
+	<b><i>Development repo for 42cursus' ft_printf project</i></b><br>
+	For further information about 42cursus and its projects, please refer to <a href="https://github.com/achrafelkhnissi/1337/blob/master/42curses/README.md"><b>42cursus repo</b></a>.
+</p>
 
-For additional information about 42cursus and its projects, please refer to the [42cursus repository](https://github.com/42cursus).
 
-### About
+<h3 align="center">
+	<a href="#%EF%B8%8F-about">About</a>
+	<span> · </span>
+	<a href="#%EF%B8%8F-usage">Usage</a>
+	<span> · </span>
+	<a href="#-useful-links">Useful Links</a>
+</h3>
 
-This project involves recoding the `printf` function. The primary goal is to create a library that contains a simplified version of `printf`. The intention is to enable reuse in future projects without the risk of being flagged as a cheater. This project primarily focuses on learning how to use variadic arguments.
+---
 
-#### TLDR
+## 🗣️ About
 
-The project consists of coding a library containing a simplified version of the `printf` function.
+> _This project is pretty straight forward. You will recode printf. Hopefully you will be able to reuse it in future project without the fear of being flagged as a cheater. You will mainly learn how to use variadic arguments._
+
+	🚀 TLDR: this project consists of coding a library that contains a simplified version (more
+	information below) of the printf function.
 
 ### Mandatory
 
-- Format specifiers: `c` `s` `p` `d` `i` `u` `x` `X` `%`
+* **format specifiers** - `cspdiuxX%`
 
-### Usage
+## 🛠️ Usage
 
-#### Requirements
+### Requirements
 
-The library is written in the C language and, therefore, requires the gcc compiler and some standard C libraries to run.
+The library is written in C language and thus needs the **`gcc` compiler** and some standard **C libraries** to run.
 
-#### Instructions
+### Instructions
 
-1. **Compiling the library**
+**1. Compiling the library**
 
-   To compile the library, run:
+To compile the library, run:
 
-   ```bash
-   $ cd path/to/ft_printf && make
+```shell
+$ cd path/to/ft_printf && make
+```
 
-### Useful Links
+**2. Using it in your code**
 
-- [C++ Reference - printf](http://www.cplusplus.com/reference/cstdio/printf/)
-- [Article: Secrets of “printf” (PDF)](link_to_pdf_file.pdf)
-- [MacOS documentation - printf](link_to_macos_printf_docs)
-- [IEEE-754 Floating Point Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
-- [How does one print floats for ft_printf? - Stack Overflow - 42 Network](https://stackoverflow.com/questions/22355899/how-does-one-print-floats-for-ft-printf-in-c-42-network)
-- [Printing Floating-Point Numbers](https://floating-point-gui.de/printable/)
-- [Printing Floating-Point Numbers Quickly and Accurately with Integers](https://www.cs.tufts.edu/comp/40/blog/accuracy-of-floating-point/)
-- [What precisely does the %g printf specifier mean? - Stack Overflow](https://stackoverflow.com/questions/14585805/what-precisely-does-the-g-printf-specifier-mean)
-- **Notes:**
-  - **Variadic Functions:**
-    - A variadic function takes indefinite size arity and a variable number of arguments as a parameter.
-  - **Ellipses `(...):**
-    - The ellipsis `...` is part of the C language and indicates that there are 0 or more optional arguments.
-  - **va_list:**
-    - The `va_list` gets the address of the first argument.
-  - **va_start:**
-    - `va_start` gets the address of the first argument.
-  - **va_arg:**
-    - Dereference the block address and type cast it to the appropriate type, then goes to the next block of memory.
-  - **Type Descriptor:**
-  - **va_end:**
-  - **Calling Conventions:**
-    - [Video: Calling Conventions](https://www.youtube.com/watch?v=JHGTXM3oIs0)
-    - [Wikipedia: X86 Calling Conventions](https://en.wikipedia.org/wiki/X86_calling_conventions)
-    - [Video: How the C Function Call Stack Works](https://www.youtube.com/watch?v=F3XiH78erNM&t=1615s)
-  - **man stdarg:**
-    - Information about `stdarg` can be found in the manual pages of your system. You can access it by running `man stdarg` in your terminal.
+To use the library functions in your code, simply include its header:
+
+```C
+#include "ft_printf.h"
+```
+
+and, when compiling your code, add the required flags:
+
+```shell
+-lftprintf -L path/to/libftprintf.a -I path/to/ft_printf.h
+```
+
+### Third-party testers
+
+* [printfTester](https://github.com/Tripouille/printfTester)
+* [gavinfielder/pft](https://github.com/gavinfielder/pft)
+* [Mazoise/42TESTERS-PRINTF](https://github.com/Mazoise/42TESTERS-PRINTF)
+* [HappyTramp/ft_printf_test](https://github.com/HappyTramp/ft_printf_test)
+* [t0mm4rx/ftprintfdestructor](https://github.com/t0mm4rx/ftprintfdestructor)
+* [charMstr/printf_lover_v2](https://github.com/charMstr/printf_lover_v2)
+
+## 📌 Useful Links
+
+* [C++ Reference - printf](http://www.cplusplus.com/reference/cstdio/printf/)
+* [Article: Secrets of “printf” (PDF)](https://www.cypress.com/file/54441/download)
+* [MacOS documentation - printf](https://opensource.apple.com/source/xnu/xnu-201/osfmk/kern/printf.c.auto.html)
+* [IEEE-754 Floating Point Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
+* [How does one print floats for ft_printf? - Stack Overflow - 42 Network](https://stackoverflow.com/c/42network/questions/133/134#134)
+* [Printing Floating-Point Numbers](http://www.ryanjuckett.com/programming/printing-floating-point-numbers/)
+* [Printing Floating-Point Numbers Quickly and Accurately with Integers](https://www.cs.tufts.edu/~nr/cs257/archive/florian-loitsch/printf.pdf)
+* [What precisely does the %g printf specifier mean? - Stack Overflow](https://stackoverflow.com/questions/54162152/what-precisely-does-the-g-printf-specifier-mean)
+
+## Notes
+
+1. What is Variadic Functions?
+	- Variadic function takes indefinite size arity and a variable number of arguments as a parameter. Situations that you do not know how many parameters pass the function.
+2. what is ellipses (...)?
+	- The ellipsis (...) is part of the C language and indicates that there are 0 or more optional arguments.
+2. What is va_list?
+	-
+3. What is va_start?
+	- gets the address of the first argument.
+4. What is va_arg?
+	- dereference the block address and type cast it to the appropriate type. then goes to the next block of memory.
+	- What is a "Type Descriptor"?
+5. What is va_end?
+	-
+6. Calling convensions!
+	- https://www.youtube.com/watch?v=JHGTXM3oIs0
+	- https://en.wikipedia.org/wiki/X86_calling_conventions
+	- https://www.youtube.com/watch?v=F3XiH78erNM&t=1615s
+## notes
+- man stdarg
+
